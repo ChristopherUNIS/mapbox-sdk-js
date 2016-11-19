@@ -1,3 +1,32 @@
+## 1.0.0-beta5
+
+- Add `limit` option to geocoder API
+- Add `poi.landmark` type to geocoder API
+- Fixes a bug where the global `Promise` object was overwritten by a polyfill
+
+## 1.0.0-beta4
+
+- Adds the concept of a reponse object
+- Update all callbacks to provide `err, body, response`.
+- Change default returned value for promises from `body` to `response`.
+- Remove `client.batchFeatureUpdate`. `client.insertFeature` or `client.destroyFeture` should be used now.
+
+## 1.0.0-beta3
+
+- Update tilestat service for new API.
+
+## 1.0.0-beta1
+
+* Add `bbox` option to geocoder API
+
+## 1.0.0-beta
+
+- Changes a major API! Geocoding is now named geocoding everywhere, so the
+  sub-require is `mapbox/lib/services/geocoding`, not, like it used to be,
+  `mapbox/lib/services/geocoder`
+- The `DatasetClient#bulkFeatureUpdate` method is renamed
+  `DatasetClient#batcFeatureUpdate` to match the rest of the Mapbox ecosystem.
+
 ## 0.12.0
 
 - Add types & country options to geocoder [#65](https://github.com/mapbox/mapbox-sdk-js/pull/65)
